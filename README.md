@@ -12,3 +12,6 @@ Git Workflow:
 + git checkout -b (tool)-(your name) master (example: Borg-yzh)
 + git add & commit
 + git push origin your-branch-name
+
+Member：
++ Zihang Yao, Ziyi Pan, Pengze Qiu, Tianqiang Xu, Xinwei Wang
