@@ -1,4 +1,4 @@
-# A brief introduction to Kubernete 
+# A brief introduction to Kubernete
 
 ## Concepts
 
@@ -64,6 +64,18 @@ Service points to a set of pod in the backend, exposed a fixed external IP addre
 ### Health
 
 Kubernetes monitors all the pods. It will remove dead pods and replace them.
+
+## Advantages
+
+Kubernetes separates the application environment from operating system by providing a uniform platform. Difference between different operating systems, environment doesn't impact application.
+
+Kubernetes makes use of containers to provides services, making it easier to scale than virtual machines.
+
+## Disadvantages
+
+People is not easy to master Kubernetes, for requiring a lot of skills.
+
+Kubnernetes performs no better than its predecessor Borg.
 
 ---------------------------------
 
