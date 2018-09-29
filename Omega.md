@@ -45,4 +45,8 @@ The paper compare three architectures: monolithic, two-level, Omega. Under the p
 But with a high concurrency architecture, a tradeoff occur: there is potential cost of redoing work when the optimistic concurrency assumptions are incorrect. The whole paper involves this tradeoff. 
 Evakuation experiments prove the overhead is acceptable at reasonable operating points, so Omega gets a better scalability and concurrency through above mechanisms.
 
+If we want to improve the concurrency of new system, we may sacrificed some safety and consistency. And we usually do some experiments to evaluate whether the overhead is accaptable and indeed improves our new system performance. 
+
 I think there are many problems to be solved, such as fairness, starvation and so on. Through Omega improve the performance and scalability, how to reduce the effects of interference is wait to be solved.
+
+Because the design details of Omega are not open-source, I look forward to a more detailed understanding of Omega.
