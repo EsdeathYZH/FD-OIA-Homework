@@ -11,8 +11,8 @@ Apollo schedules over 20,000 tasks per second in a production cluster with over 
 
 * A Job Manager (JM),which is implemented in a master-slave configuration using Paxos is assigned to manage the life cycle of each job. The global cluster load information used by each JM is provided through the cooperation of two additional entities in the Apollo framework: a Resource Monitor (RM) for each cluster and a Process Node (PN) on each server.
 * A PN process running on each server is responsible for managing the local resources on that server and performing local scheduling
-* the RM aggregates load information from PNs across the cluster continuously, providing a global view of the cluster status for each JM to make informed scheduling decisions.
-* a local queue of tasks is maintained by each PN to better predict resource utilization in the near future and to optimize scheduling quality. It advertises its future resource availability in the form of a wait-time matrix inferred from the queue
+* The RM aggregates load information from PNs across the cluster continuously, providing a global view of the cluster status for each JM to make informed scheduling decisions.
+* A local queue of tasks is maintained by each PN to better predict resource utilization in the near future and to optimize scheduling quality. It advertises its future resource availability in the form of a wait-time matrix inferred from the queue
 
 ## The Technical Contribution of Apollo
 1. To balance scalability and scheduling quality, Apollo adopts a distributed and (loosely) coordinated scheduling framework.
