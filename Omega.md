@@ -3,6 +3,10 @@
 A brief introduction:
 >Omega is a parallel scheduler architecture built around shared state, using lock free optimistic concurrency control, to achieve both implementation extensibility and performance scalability.
 
+The Image below shows three types of architecture, the right one represents Omega.
+
+![three types of architecture](https://github.com/EsdeathYZH/FD-OIA-Homework/blob/Omega-yzh/three-types-omega.png?raw=true)
+
 Omega has several important characteristics:
 
 - **divide and conquer**
