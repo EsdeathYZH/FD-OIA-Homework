@@ -43,6 +43,7 @@ Undoubtedly, Apollo is a high-performance scheduling framework, which can schedu
 in addition to this, Apollo combines both static and runtime information and leverages program patterns to estimate task runtime. Apollo also includes a set of mechanisms to compensate inaccuracy whenever needed.  
 Unluckily, Apollo is not an open-source framework, so people can't get the source code of the Apollo to have a deeper investigation, nor can they make a secondary development on it.
 Gennerally speaking, Apollo is a marvelling scheduling framework to address the challenge of the cloud-scale computing and I'm wating for its open-source!
+
 ------
 ## Reference
 1. Eric Boutin, Jaliya Ekanayake, Wei Lin, Bing Shi, and Jingren Zhou, Microsoft  "Apollo: Scalable and Coordinated Scheduling for Cloud-Scale Computing." (2014) 
