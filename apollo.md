@@ -38,6 +38,11 @@ and validation at scale.
 2. Apollo is too heavy and complicated, it's hrad for people to master it.
 3. Apollo is not rich in the kinds of jobs, such as k8s's deployment, service, cronjob, batchjob and so on.
 
+## Comment
+Undoubtedly, Apollo is a high-performance scheduling framework, which can schedule over 20,000 tasks per second in a production cluster with over 20,000 machines. It also has been used as a production tool in Microsoft, so its stability has been prooved. Apollo's scheduling technology is one of its shining points. With the PN and RM, Apollo can shedule the job according to the future, 
+in addition to this, Apollo combines both static and runtime information and leverages program patterns to estimate task runtime. Apollo also includes a set of mechanisms to compensate inaccuracy whenever needed.  
+Unluckily, Apollo is not an open-source framework, so people can't get the source code of the Apollo to have a deeper investigation, nor can they make a secondary development on it.
+Gennerally speaking, Apollo is a marvelling scheduling framework to address the challenge of the cloud-scale computing and I'm wating for its open-source!
 ------
 ## Reference
 1. Eric Boutin, Jaliya Ekanayake, Wei Lin, Bing Shi, and Jingren Zhou, Microsoft  "Apollo: Scalable and Coordinated Scheduling for Cloud-Scale Computing." (2014) 
