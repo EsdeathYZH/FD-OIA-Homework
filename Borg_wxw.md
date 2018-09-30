@@ -23,11 +23,11 @@
 ---
 + ### 用户视角 The user perspective
 #### <br>
-### 1. 工作负载 The workload
+### 1. The workload
 #### &ensp;&ensp; Borg上运行的负载主要有两类：第一类是长时间运行、要求快速处理的、延迟敏感的请求(Gmail、Google、Docs、web等)；第二类是需要几秒到几天来完成的批处理，对时间波动不敏感。多数的长时间运行服务是高优先级的。
 #### <br>
 
-### 2. 集群和cell Clusters and cells
+### 2. Clusters and cells
 #### &ensp;&ensp; 一个cell中的机器通常属于单个集群，并且由数据中心规模的高性能网络结构连接起来，多个数据中心的集合构成了一个site。
 #### &ensp;&ensp; 一个集群通常包含一个大的cell，也许其中还有一些小规模用于测试或者其他特殊目的的cell。我们总是极力避免单点故障发生。
 #### &ensp;&ensp; ps: 所以这次交大断网算是一次单点故障吗？
@@ -43,8 +43,8 @@
 #### &ensp;&ensp; 一个alloc集就像是一个job：它是一系列的alloc操作用于在多台机器上预留资源。一旦一个alloc操作被创建，一个或多个job就能被提交并且运行在它之上。
 
 #### <br>
-### 5. 优先级、配额和准入控制 Priority quota and admission control
-### 6. 命名和监控 Naming and monitoring
+### 5. Priority quota and admission control
+### 6. Naming and monitoring
 
 #### <br>
 
