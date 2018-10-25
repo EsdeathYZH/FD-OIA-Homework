@@ -1,4 +1,4 @@
-<center><big>cpu</big></center>
+## cpu
 
 ### vendors
 + Intel公司
