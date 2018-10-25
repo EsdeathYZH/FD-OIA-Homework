@@ -42,7 +42,7 @@
 + Quark Soc
   
       Intel在美国旧金山的IDF 2013发表最新的微型 SOC系统晶片Quark X1000，与现有的Atom相比，面积不但缩小五分之一，电力消耗更只有Atom的十分之一。Intel把Quark晶片组定位在穿戴型科技、消费型电子产品与生物监测设备等应用中。
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![夸克](./pic/pic2/夸克.png)
+    ![夸克](./pic/pic2/夸克.png)
 
 + 至强
 
