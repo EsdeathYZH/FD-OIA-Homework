@@ -108,3 +108,18 @@ In this article, I'm going to introduce GPU, NPU and TPU in detail.
 ### Cons
 
 * Matrix Multiply Unit is specifically optimized for matrix multiply, not fit for general computing
+
+## Measure
+
+To measure the performance of an xPU, it is easy for us to recall benchmark. And we do have some benchmark tools now for CPU and GPU, but not for others like TPU and NPU.
+
+Companies making xPUs takes another metric instead, that is, how much operations the processer can finish in a second, refered to OPS.
+
+As xPU have a really high frequency, the performance metric is often referred to as GOPS or TOPS. 
+For example, Google TPU reaches 92 TOPS, meaning the TPU can perform 92 T operations in a second.
+
+Along with TOPS, TOPS/Watt is often referred to. TOPS/Watt stands for how many operations a processor can perform in one second and only with 1 watt energy. This is a no less important metirc for the xPU, which measures its power efficiency.
+
+## Comment
+
+xPU is very  similar to GPU in the way it merges. GPU cones out from CPU as CPU is too heavily burdened with graphic processing. xPU comes out as CPU is too slow for AI. Althougn GPU performs better than CPU for its ablitity to processing massive data, this is based on rather high power consumption. Yet only a few chips for AI have staged, like NPU of Cambrian, Google's TPU, but all shows better performance than CPU and GPU. We can assume that, our computer, mobile phone will no longer contains just CPU and GPU, but more xPUs for various purposes. And some point in the future, these xPUs will be integrated to be a electronic brain, just like human brain. 
