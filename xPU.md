@@ -37,6 +37,8 @@ In this article, I'm going to introduce GPU, NPU and TPU in detail.
 > The term GPU was popularized by Nvidia in 1999.  
 > A graphics processing unit (GPU) is a specialized electronic circuit designed to rapidly manipulate and alter memory to accelerate the creation of images in a frame buffer intended for output to a display device.
 
+![GPU architecture](https://www.researchgate.net/profile/Liang_Men2/publication/288930312/figure/fig1/AS:408818962976774@1474481444612/Nvidias-Fermi-GPU-Architecture.png)
+
 ### Feature
 
 * GPU contains more cores comparing to CPU
@@ -61,6 +63,8 @@ In this article, I'm going to introduce GPU, NPU and TPU in detail.
 
 > A neural processor or a neural processing unit (NPU) is a microprocessor that specializes in the acceleration of machine learning algorithms, typically by operating on predictive models such as artificial neural networks (ANNs) or random forests (RFs).
 
+![NPU](http://en.people.cn/NMediaFile/2016/0622/FOREIGN201606221424000501629084965.jpg)
+
 ### Features
 
 * NPU has only a few cores, some even only one core so far
@@ -83,6 +87,8 @@ In this article, I'm going to introduce GPU, NPU and TPU in detail.
 ## TPU
 
 > Tensor Processing Unit (TPU) is Google first custom accelerator ASIC [application-specific integrated circuit] for machine learning. It is customized to give high performance and power efficiency when running TensorFlow.
+
+![TPU architecture](https://img.technews.tw/wp-content/uploads/2017/04/07111001/first-in-depth-look-at-googles-tpu-architecture-1.jpg)
 
 ### Features
 
