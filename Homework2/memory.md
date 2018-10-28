@@ -104,6 +104,7 @@ ECC与奇偶校验不同的是，如果数据位是8位，则需要增加5位来
  
 ### 拓展：DSM（Distributed Shared Memory 分布式内存）
 
+![image](./pic/DSM.png)
 
 实现分布式内存（DSM）的方法主要有三种
 
