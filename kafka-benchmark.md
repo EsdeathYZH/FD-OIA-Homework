@@ -31,3 +31,17 @@ Here we run two test, one is to publish messages to Kafka, the other is to consu
 Test result are in **result** directory.
 - test-producer-${record size}-${throughput}.txt
 - test-consumer-${fetch size}.txt
+
+## Producer Test Result
+
+* Real Throughput under different record size and ideal throughput
+    ![Real Throughput](./image005.png)
+
+* Speed under different record size and ideal throughput
+    ![Speed](./image007.png)
+
+* average latency under different record size and ideal throughput
+    ![avg latency](./image001.png)
+
+* maxium latency under different record size and ideal throughput
+    ![max latency](./image003.png)
