@@ -28,7 +28,7 @@ Flink是一个针对流数据和批数据的分布式处理引擎，主要由Jav
 批数据只是流数据的一个极限特例而已。Flink 可以支持本地的快速迭代，以及一些环形的迭代任务，并且可以定制化内存管理。
 在这点，如果要对比 Flink 和 Spark 的话，Flink 并没有将内存完全交给应用层。这也是为什么 Spark 相对于 Flink，
 更容易出现 OOM 的原因（out of memory）。就框架本身与应用场景来说，Flink 更相似与 Storm。
-!()[pic/Flink.jpeg]
+![](pic/Flink.jpeg)
 
 ##### Storm
 Storm是一个分布式的、容错的实时计算系统，做作为最早的一个实时计算框架，早期应用于各大互联网公司。
@@ -36,21 +36,21 @@ Storm是一个分布式的、容错的实时计算系统，做作为最早的一
 从哪里接收消息，消息如何序列化，真正的业务逻辑只占了源代码的一小部分。一个应用程序的逻辑运行在很多worker上，
 但这些worker需要各自单独部署，还需要部署消息队列。最大问题是系统很脆弱，而且不是容错的：需要自己保证消息队列和worker进程工作正常。
 Storm具有编程简单、高性能，低延迟、分布式、可扩展、容错、消息不丢失等特点。
-!()[pic/Storm.png]
+![](pic/Storm.png)
 
 ##### Spark streaming
 Spark streaming采用小批量的方式，提高了吞吐性能。Spark streaming批量读取数据源中的数据，
 然后把每个batch转化成内部的RDD。Spark streaming以batch为单位进行计算），而不是以record为单位，
 大大减少了ack所需的开销，显著满足了高吞吐、低延迟的要求，同时也提供exactly once功能。
 但也因为处理数据的粒度变大，导致Spark streaming的数据延时不如Storm，Spark streaming是秒级返回结果（与设置的batch间隔有关），Storm则是毫秒级。
-!()[pic/spark-streaming.jpeg]
+![](pic/spark-streaming.jpeg)
 
 ##### Apache Samza
 Samza处理数据流时，会分别按次处理每条收到的消息。Samza的流单位既不是元组，也不是Dstream，而是一条条消息。
 在Samza中，数据流被切分开来，每个部分都由一组只读消息的有序数列构成，而这些消息每条都有一个特定的ID。
 该系统还支持批处理，即逐次处理同一个数据流分区的多条消息。Samza的执行与数据流模块都是可插拔式的，
 尽管Samza的特色是依赖Hadoop的Yarn（另一种资源调度器）和Apache Kafka。
-!()[pic/samka.jpeg]
+![](./pic/samka.jpeg)
 
 ##### Apache Kafka
 Kafka是一个分布式的、分区的、多复本的日志提交服务，它通过一种独一无二的设计提供了一个消息系统的功能。实现流处理最基本的方法是使用Kafka API读取输入数据流进行处理，并产生输出数据流。这个过程可以用任何编程语言实现。这种方法比较简单，易于操作，适应于任何有Kafka客户端的语言。
