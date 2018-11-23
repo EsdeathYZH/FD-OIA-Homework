@@ -30,3 +30,22 @@ write a technical report about CPU, Memory, Storage(Ceph), Network and xPU
 + You own comment
 
   *Eg:How to tradeoff*
+
+### Homework 3
+Setup a Kafka cluster
+
++ Stand alone, cluster, docker etc.
+  
+    *Report: how to setup the Kafka*
+
++ Develop your own producer and consumer
+  
+    *Code & readme.md*
+
++ Design an experiment to quantitative analyzing
+  
++ Design a scenario to demonstrate the streaming processing
+  
+    *Code & readme.md*
+
++ Stream computing framework
