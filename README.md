@@ -49,3 +49,76 @@ Setup a Kafka cluster
     *Code & readme.md*
 
 + Stream computing framework
+
+### Final Project
+#### Requirement1
++ Prepare a CI/CD environment
+
+**Deliverable**
+
+*Markdown*
+
+*Demo*
+
++ Prepare a web application, build container images
+
+**Application**
+
+*Front-end*
+
+*Back-end*
+
+*Database*
+
+**Deliverable**
+
+*Demo*
+
+*Markdown*
+
++ Automatically build images after a PR
+
+*Demo*
+
+*Markdown*
+
+#### Requirement2
+
++ Prepare a Kubernetes environment
+
+**Mode**
+
+*Single Host* (snap)
+
+**Cluster**
+
+*Kubeadm*
+
++ Features
+
+**DNS**
+
+**Dashboard**
+
++ Deliverable
+
+*Demo*
+
+*Markdown*
+
+#### Requirement3
+
++ Deploy your web application on Kubernetes
+
+**Expose your web application**
+
+**Deliverable**
+
+*Demo*
+
+*Deployment yaml*
+
+*Markdown*
+
+#### Requirement4
+#### Requirement5
