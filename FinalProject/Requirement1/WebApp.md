@@ -1,4 +1,4 @@
-#部署Web应用
+# 部署Web应用
 ### 项目来源
 本次作业由于任老师有具体要求而且本次作业的重点也不在于Web App开发，所以我们选用了github上的一个web项目作为CICD的目标Web App
 
@@ -12,8 +12,8 @@
 
 + 数据库 Mysql
 
-###部署过程
-####1.在前后端两个项目的目录下分别创建.drone.yaml，Drone会根据这个文件CICD
+### 部署过程
+#### 1.在前后端两个项目的目录下分别创建.drone.yaml，Drone会根据这个文件CICD
 
 下面附上后端项目的.drone.yaml：
 ```
@@ -80,7 +80,7 @@ pipeline:
 
 可以看到，Drone的CICD由build, publish, deploy几个阶段构成，而Drone一个很大的特点就是CICD的每一个阶段都是在镜像中完成的。Drone相比jenkins的好处是，所有的image都是开发者提供，不需要运维参与在CI服务器上部署各种语言编译需要的环境。
 
-####2.在前后端两个项目的目录下分别创建Dockerfile
+#### 2.在前后端两个项目的目录下分别创建Dockerfile
 
 后端Dockerfile：
 ```
@@ -111,6 +111,6 @@ CMD /app/runboot.sh
  CMD ["serve", "-s", "build"]
 ```
 
-####3.之后每次PR，Drone都会自动根据yaml文件构建镜像
+#### 3.之后每次PR，Drone都会自动根据yaml文件构建镜像
 下面是Drone build截图：
 ![Drone-build](./pics/snapshot5.jpg)
