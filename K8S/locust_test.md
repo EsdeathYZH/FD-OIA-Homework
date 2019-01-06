@@ -70,7 +70,7 @@ We increase backend pod from 1, 3 to 5 pod.
 __Request Statistics__
 
 | Method | Name | Requests | Failures | Median response time | Average response time | Min response time | Max response time | Average Content Size | RPS |
-| :--: | :-- | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| :--: | :-- | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | Get | /api/persons/detail/[id] | 42131 | 326956 | 23 | 82 | 2 | 61091 | 144 | 127.26 |
 | GET | /api/persons?page=[page] | 11189| 132760| 37 | 4426 | 4 | 87208| 857 | 33.80 |
 |GET | /api/persons?sex=[sex] | 5410 | 61861 | 240 | 6328 | 0 | 86932 | 1146  | 16.34 |
@@ -96,10 +96,11 @@ __Response Time Distribution__
 * 1 Pod
 
 __Request Statistics__
+
 | Method | Name | Requests | Failures | Median response time | Average response time | Min response time | Max response time | Average Content Size | RPS |
-| :--: | :-- | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| GET | / | 46735 | 25 | 200 | 1510 | 1 | 62210 | 426 | 94.63
-| None | Total | 46735 | 25 | 200 | 1510 | 0 | 62210 | 426 | 94.63
+| :--: | :-- | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| GET | / | 46735 | 25 | 200 | 1510 | 1 | 62210 | 426 | 94.63 |
+| None | Total | 46735 | 25 | 200 | 1510 | 0 | 62210 | 426 | 94.63 |
 
 __Response Time Distribution__
 
