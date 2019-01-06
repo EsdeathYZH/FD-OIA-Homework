@@ -1,4 +1,4 @@
-#在Kubernete上部署Web app
+# 在Kubernete上部署Web app
 + 当Web app通过CICD平台Drone打包成镜像之后，我们需要通知kubeadm拉取镜像部署Web app。
 
 + 这个步骤是在Drone的deploy阶段做的，命令很简单，就是通知K8S重新拉镜像部署
