@@ -8,14 +8,14 @@
 ### 技术栈
 + 前端  vue.js + node.js + webpack
 
-+ 后端 spring boot 1.5.9 + mybatis
++ 后端 spring boot 1.5.9
 
-+ 数据库  Sqlite3
++ 数据库 Mysql
 
 ###部署过程
-+ 在前后端两个项目的目录下分别创建.drone.yaml，Drone会根据这个文件CICD
+####1.在前后端两个项目的目录下分别创建.drone.yaml，Drone会根据这个文件CICD
 
-下面附上.drone.yaml：
+下面附上后端项目的.drone.yaml：
 ```
 pipeline:
   build: 
@@ -46,10 +46,41 @@ pipeline:
     port: 22
     script:
       - /root/shell/backend-deployment.sh
-
 ```
 
-+ 在前后端两个项目的目录下分别创建Dockerfile
+前端项目的.drone.yaml:
+```
+pipeline:
+  build: 
+    image: registry.cn-shenzhen.aliyuncs.com/pipipan/node:1.0
+    commands:
+      - npm install
+      - npm run-script build
+  publish:
+    image: docker
+    secrets: [docker_username,docker_password]
+    commands:
+        - docker login --username=$DOCKER_USERNAME --password=$DOCKER_PASSWORD registry.cn-shenzhen.aliyuncs.com/pipipan/meetingroom
+        - docker build -t registry.cn-shenzhen.aliyuncs.com/pipipan/frontend:master -f Dockerfile .
+        - docker push registry.cn-shenzhen.aliyuncs.com/pipipan/frontend:master
+    volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+    when:
+        branch: master
+        status: success
+
+  deploy:
+    image: appleboy/drone-ssh
+    host: 129.211.119.51
+    secrets: [ssh_username, ssh_password]
+    port: 22
+    script:
+      - /root/shell/frontend-deployment.sh
+```
+
+可以看到，Drone的CICD由build, publish, deploy几个阶段构成，而Drone一个很大的特点就是CICD的每一个阶段都是在镜像中完成的。Drone相比jenkins的好处是，所有的image都是开发者提供，不需要运维参与在CI服务器上部署各种语言编译需要的环境。
+
+####2.在前后端两个项目的目录下分别创建Dockerfile
 
 后端Dockerfile：
 ```
@@ -80,6 +111,6 @@ CMD /app/runboot.sh
  CMD ["serve", "-s", "build"]
 ```
 
-+ 之后每次PR，Drone都会自动根据yaml文件构建镜像
+####3.之后每次PR，Drone都会自动根据yaml文件构建镜像
 下面是Drone build截图：
-![Drone-build](./pics/snapshot5.png)
+![Drone-build](./pics/snapshot5.jpg)

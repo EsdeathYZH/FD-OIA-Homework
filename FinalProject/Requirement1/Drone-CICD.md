@@ -46,7 +46,7 @@ services:
 ### 运行截图
 ![Drone 界面](./pics/snapshot1.png)
 通过点击repo右方按钮即可开启对该仓库的CI/CD
-![每次PR的build界面](./pics/snapshot2.png)
+![每次PR的build界面](./pics/snapshot2.jpg)
 上图为每次PR后的build界面
 
 ### 参考

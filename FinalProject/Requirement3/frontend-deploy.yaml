@@ -1,15 +1,3 @@
-#在Kubernete上部署Web app
-+ 当Web app通过CICD平台Drone打包成镜像之后，我们需要通知kubeadm拉取镜像部署Web app。
-
-+ 这个步骤是在Drone的deploy阶段做的，命令很简单，就是通知K8S重新拉镜像部署
-```
-#! /bin/bash
-/root/rke_deploy/kubernetes/client/bin/kubectl delete -f /root/web-application/web-frontend-deploy.yaml
-/root/rke_deploy/kubernetes/client/bin/kubectl create -f /root/web-application/web-frontend-deploy.yaml
-```
-
-+ 创建deployment.yaml文件，下面列出前端的部署yaml
-```
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
@@ -49,6 +37,3 @@ spec:
   - port: 8080
     targetPort: 8080
     nodePort: 31002
-```
-
-+ 部署Web App，通过浏览器访问成功，部署成功。

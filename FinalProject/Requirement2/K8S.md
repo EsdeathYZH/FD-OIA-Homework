@@ -3,15 +3,15 @@
 
 本次搭建K8S环境，我们使用了一个开源的轻量级K8S安装程序：RKE
 
-+ Kubernete运行的模式为cluster模式，我们在两台云服务器上搭建K8S平台，一台为Kubeadm，一台为worker
++ Kubernete运行的模式为cluster模式，我们在两台云服务器上搭建K8S平台，一台为master，一台为worker
 
-+ 在Kubeadm上配置hosts文件，添加node1，etcd，配置ssh使adm可以登录worker
++ 在Kubeadm上配置hosts文件，添加node1，etcd，配置ssh使master可以登录worker
 
 + 安装rke-v0.1.13，直接将github上的release可执行文件mv到搭建目录之后更名为rke
 
 + ./rke config生成cluster.yml，根据命令行提示输入节点信息
 ```
-# If you intened to deploy Kubernetes in an air-gapped environment,
+# If you intented to deploy Kubernetes in an air-gapped environment,
 # please consult the documentation on how to configure custom RKE images.
 nodes:
 - address: 172.17.0.8
@@ -192,3 +192,5 @@ kubectl describe  secret kubernetes-dashboard --namespace=kube-system
 + 打开kubeconfig文件(~/.kube/config)，并添加Token
 
 + 从web界面 导入kubeconfig文件，完成dashboard搭建
+
+### DNS
