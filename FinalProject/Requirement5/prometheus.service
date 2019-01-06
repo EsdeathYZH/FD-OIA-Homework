@@ -1,0 +1,7 @@
+[Unit]
+Description=Node Exporter
+[Service]
+User=root
+ExecStart=/usr/local/prometheus/prometheus --config.file=/usr/local/prometheus/prometheus.yml
+[Install]
+WantedBy=default.target
