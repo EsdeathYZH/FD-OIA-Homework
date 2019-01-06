@@ -96,6 +96,7 @@ __Response Time Distribution__
 * 1 Pod
 
 __Request Statistics__
+
 | Method | Name | Requests | Failures | Median response time | Average response time | Min response time | Max response time | Average Content Size | RPS |
 | :--: | :-- | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | GET | / | 46735 | 25 | 200 | 1510 | 1 | 62210 | 426 | 94.63
