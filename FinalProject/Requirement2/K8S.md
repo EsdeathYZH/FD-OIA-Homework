@@ -195,3 +195,5 @@ kubectl describe  secret kubernetes-dashboard --namespace=kube-system
 + 从web界面 导入kubeconfig文件，完成dashboard搭建
 
 ### DNS
+
+rke启动集群的时候会自动配置好Kubernete的DNS服务，DNS的信息存储在etcd中。
