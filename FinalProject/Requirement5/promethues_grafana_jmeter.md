@@ -1,19 +1,20 @@
 # 在Kubernete上实现自动伸缩
 + 我们期望当服务器的CPU压力增大时，它能自动增加服务的数量，来应对突发的workload
 + 首先我们使用jmeter，进行压力测试
-```
-    Jmeter  是一款使用Java开发的，开源免费的，测试工具， 主要用来做功能测试和性能测试（压力测试/负载测试）. 
+
     步骤一：新建一个Thread Group,  jmeter的所有任务都必须由线程处理，所有任务都必须在线程组下面创建。
-    步骤一：发送一个Get 方法的http 请求: http://129.211.119.51:31001/api/persons?sex=male&email=
-    步骤二：为请求添加动态参数。可以使用读取文件的方式，添加多个动态参数到测试中，jmeter会随机使用我们数据进行测试。
-    添加CSV默认值来源文件和变量值。
-    在http请求中使用${变量名} 获得文件中的值。
-    步骤三：添加查看结果树
-    步骤四：执行后，即可通过”查看结果树“查询
-```
-![](./pic/csv.png)
+
+    步骤二：发送一个Get 方法的http 请求: http://129.211.119.51:31001/api/persons?sex=male&email=
 ![](./pic/http.jpg)
+
+    步骤三：为请求添加动态参数。可以使用读取文件的方式，添加多个动态参数到测试中，jmeter会随机使用我们数据进行测试。
+![](./pic/csv.png)
+
+    步骤四：添加查看结果树
 ![](./pic/summary.jpg)
+
+    步骤五：添加查看结果树
+
 + 接着我们部署prometheus和node_exporter进行对服务器进行监控
 ```
     Prometheus（普罗米修斯）是一套开源的监控&报警&时间序列数据库的组合.由SoundCloud公司开发。
@@ -71,5 +72,16 @@ grafana 配置:
     git clone https://github.com/percona/grafana-dashboards.git
     cp -r grafana-dashboards/dashboards /var/lib/grafana/
 ```
+
++   网络占用情况    
 ![](./pic/network.jpg)
+
++   不同pod cpu使用情况
 ![](./pic/load.jpg)
+
++ 自动伸缩的命令
+```
+    kubectl autoscale deployment backend --max=5 --min=1
+```
+
++ 冷启动时间计算公式：t = t(backup开始占用CPU资源) - t(network IO开始上涨)
