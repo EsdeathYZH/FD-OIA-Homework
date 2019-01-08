@@ -4,6 +4,8 @@
 
 ### Front-end
 
+#### API
+
 - GET
 
     1. `/`
@@ -58,6 +60,8 @@ We increase backend pod from 1, 2 to 3 pod.
 
 ### Front-end
 
+We increase backend pods from 1 to 3, with 3 backend pods providing service.
+
 ## Test Result
 
 ### Back-end
@@ -68,10 +72,10 @@ __Request Statistics__
 
 | Method | Name | Requests | Failures | Median response time | Average response time | Min response time | Max response time | Average Content Size | RPS |
 | :--: | :-- | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| GET | | /api/persons/detail/[id] | 49715 | 35917 | 3 | 30 | 0 | 6474 | 144 | 84.88 |
-| GET | | /api/persons?page=[page] | 15653 | 14196 | 19 | 3869 | 0 | 86953 | 799 | 26.73 |
-| GET | | /api/persons?sex=[sex] | 7607 | 6647 | 220 | 5365 | 4 | 87334 | 1143 | 12.99 |
-| PUT | | /api/persons/detail/[id] | 819 | 506 | 11 | 82 | 0 | 6351 | 155 | 1.40 |
+| GET | /api/persons/detail/[id] | 49715 | 35917 | 3 | 30 | 0 | 6474 | 144 | 84.88 |
+| GET | /api/persons?page=[page] | 15653 | 14196 | 19 | 3869 | 0 | 86953 | 799 | 26.73 |
+| GET | /api/persons?sex=[sex] | 7607 | 6647 | 220 | 5365 | 4 | 87334 | 1143 | 12.99 |
+| PUT | /api/persons/detail/[id] | 819 | 506 | 11 | 82 | 0 | 6351 | 155 | 1.40 |
 | None | Total | 73794 | 57266 | 5 | 1395 | 0 | 87334 | 386 | 126.00 |
 
 __Response Time Distribution__
@@ -102,10 +106,10 @@ __Request Statistics__
 
 | Method | Name | Requests | Failures | Median response time | Average response time | Min response time | Max response time | Average Content Size | RPS |
 | :--: | :-- | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| GET | | /api/persons/detail/[id] | 41854 | 3257 | 6 | 525 | 1 | 66378 | 145 | 58.11 |
-| PUT | | /api/persons/detail/[id] | 630 | 59 | 14 | 470 | 0 | 13683 | 155 | 0.87 |
-| GET | | /api/persons?page=[page] | 12561 | 1635 | 570 | 5596 | 4 | 105685 | 805 | 17.44 |
-| GET | | /api/persons?sex=[sex] | 6039 | 713 | 1400 | 7805 | 4 | 90075 | 1144 | 8.39 |
+| GET | /api/persons/detail/[id] | 41854 | 3257 | 6 | 525 | 1 | 66378 | 145 | 58.11 |
+| PUT | /api/persons/detail/[id] | 630 | 59 | 14 | 470 | 0 | 13683 | 155 | 0.87 |
+| GET | /api/persons?page=[page] | 12561 | 1635 | 570 | 5596 | 4 | 105685 | 805 | 17.44 |
+| GET | /api/persons?sex=[sex] | 6039 | 713 | 1400 | 7805 | 4 | 90075 | 1144 | 8.39 |
 | None | Total | 61084 | 5664 | 16 | 2287 | 0 | 105685 | 379 | 84.81 |
 
 __Response Time Distribution__
@@ -136,10 +140,10 @@ __Request Statistics__
 
 | Method | Name | Requests | Failures | Median response time | Average response time | Min response time | Max response time | Average Content Size | RPS |
 | :--: | :-- | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| GET | | /api/persons/detail/[id] | 36584 | 73 | 7 | 161 | 2 | 52196 | 145 | 111.74 |
-| PUT | | /api/persons/detail/[id] | 572 | 7 | 59 | 343 | 8 | 52333 | 155 | 1.75 |
-| GET | | /api/persons?page=[page] | 10249 | 219 | 620 | 6047 | 5 | 87328 | 803 | 31.30 |
-| GET | | /api/persons?sex=[sex] | 5190 | 92 | 1400 | 8557 | 5 | 87149 | 1145 | 15.85 |
+| GET | /api/persons/detail/[id] | 36584 | 73 | 7 | 161 | 2 | 52196 | 145 | 111.74 |
+| PUT | /api/persons/detail/[id] | 572 | 7 | 59 | 343 | 8 | 52333 | 155 | 1.75 |
+| GET | /api/persons?page=[page] | 10249 | 219 | 620 | 6047 | 5 | 87328 | 803 | 31.30 |
+| GET | /api/persons?sex=[sex] | 5190 | 92 | 1400 | 8557 | 5 | 87149 | 1145 | 15.85 |
 | None | Total | 52595 | 391 | 26 | 2138 | 0 | 87328 | 372 | 160.65 |
 
 __Response Time Distribution__
